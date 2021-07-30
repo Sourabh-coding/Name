@@ -1,0 +1,18 @@
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="push.min.js"></script>
+<script src="serviceWorker.min.js"></script>
+<script>
+  function notify(){
+   // Push.create("Hello world");
+   Push.create("Hello world!", {
+    body: "How's it hangin'?",
+    icon: 'https://i.postimg.cc/y3CkWfz7/UNMEET-free-file.png',
+    timeout: 4000,
+    onClick: function () {
+        window.focus();
+        this.close();
+    }
+});
+  }
+</script>
+<a href="javascript:void(0)" onclick="notify()">bmb</a>
